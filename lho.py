@@ -47,7 +47,13 @@ dp = ColumnDataSource(data=dict(x=var, y=psi))
 
 
 #set up plot
-
+TOOLS = "crosshair,pan,wheel_zoom,box_zoom,reset,box_select,lasso_select"
+output_file("lines.html")
+p = figure(plot_height=600, plot_width=600,
+            tools=  TOOLS, title="Linear Harmonic Oscillator",
+            x_range=[-25,25], y_range=[-1.5,1.5],
+            x_axis_label="x", y_axis_label="psi")
+p.line(x='x', y='y', source=dp, legend_label="psi", line_color="blue")
 
 
 #set up widgets
