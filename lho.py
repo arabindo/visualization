@@ -17,19 +17,18 @@ def hermite(n):
         return poly[n]
         
     elif  n==0:
-        val0 = 1
-        return val0
+        val_0 = 1
+        return val_0
         
     elif n==1:
         val_1 = 2 * var 
-        val=val_1
-        poly[1]= val
-        return val
+        poly[1]= val_1
+        return val_1
         
     else:
-        value = ((2*var*hermite(n-1)) - (2*(n-1)*hermite(n-2)))
-        poly[n]=value
-        return value
+        val_n = ((2*var*hermite(n-1)) - (2*(n-1)*hermite(n-2)))
+        poly[n]=val_n
+        return val_n
     
     
 
@@ -48,7 +47,6 @@ dp = ColumnDataSource(data=dict(x=var, y=psi))
 
 #set up plot
 TOOLS = "crosshair,pan,wheel_zoom,box_zoom,reset,box_select,lasso_select"
-output_file("lines.html")
 p = figure(plot_height=600, plot_width=600,
             tools=  TOOLS, title="Linear Harmonic Oscillator",
             x_range=[-25,25], y_range=[-1.5,1.5],
@@ -57,11 +55,18 @@ p.line(x='x', y='y', source=dp, legend_label="psi", line_color="blue")
 
 
 #set up widgets
-
+state = Slider(title="state of particle", value=10, start=0, end=150, step=1)
 
 
 #set up callback
-
+def update(attrname, old, new):
+    pass
+    
+state.on_change('value', update)
 
 
 #setup layout
+inputs = column(state)
+
+curdoc().add_root(row(inputs, p, width=800))
+curdoc().title = "Wave function for Linear Harmonic Oscillator"
