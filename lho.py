@@ -60,7 +60,16 @@ state = Slider(title="state of particle", value=10, start=0, end=150, step=1)
 
 #set up callback
 def update(attrname, old, new):
-    pass
+    
+    #get the current value from slider
+    n_new = state.value
+    
+    #generate new set of value
+    var = np.linspace(-20, 20, 10000)
+    A_n = hermite(n_new)*np.exp(-(var**2)/2)
+    psi = (1 / (math.pow(2, n_new) * math.factorial(n_new))**0.5) * ((m*w/(pi*h_bar))**0.25) * A_n
+    dp.data = dict(x=var, y=psi)
+
     
 state.on_change('value', update)
 
