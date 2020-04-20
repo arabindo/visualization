@@ -1,5 +1,5 @@
 import numpy as np
-
+import math
 from bokeh.io import curdoc
 from bokeh.layouts import column, row
 from bokeh.models import ColumnDataSource, Slider, TextInput
@@ -34,8 +34,16 @@ def hermite(n):
     
 
 #set up data
+m = 1
+w = 1
+h_bar = 1
+n=10
+pi = np.pi
 
-
+var = np.linspace(-20, 20, 10000)
+A = hermite(n)*np.exp(-(var**2)/2)
+psi = (1 / (math.pow(2, n) * math.factorial(n))**0.5) * ((m*w/(pi*h_bar))**0.25) * A
+dp = ColumnDataSource(data=dict(x=var, y=psi))
 
 
 #set up plot
