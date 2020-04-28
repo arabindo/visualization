@@ -33,8 +33,8 @@ After executing the line, contain animate() function, you'll able to get the ann
 
 ### Screenshots are taken from animation:
 
-![output](https://github.com/arabindo/QLho/blob/master/outimg/output2.png)
-![output](https://github.com/arabindo/QLho/blob/master/outimg/output3.png)
+![output2](https://github.com/arabindo/QLho/blob/master/outimg/out2.png)
+![output3](https://github.com/arabindo/QLho/blob/master/outimg/out3.png)
 
 ****Note-***
 
