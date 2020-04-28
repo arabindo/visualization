@@ -1,10 +1,16 @@
-`python-3.7.3` `NumPy-1.18.1` `bokeh-2.0.1`
+`python-3.7.3` `NumPy-1.18.1` `bokeh-2.0.1` `matplotlib-3.1.3`
 
 # Quantum Linear Harmonic Oscillator
 
-Here I plot interactive wave function of 1-d LHO.
+Here I plot wave function of 1-d LHO.
+
+The solution is assumed.
 
 I use recurrence relation of Hermite polynomial, although one can use hermite polynomial direct from NumPy package.
+
+The .py file is build with bokeh.
+
+## Usage of lho.py
 
 Using slider one can change the value of n, to get the nth state of the wave function (n is restricted to a upperlimit 150)
 
@@ -18,6 +24,12 @@ in your browser.
 
 A sample of output:
 ![output](https://github.com/arabindo/QLho/blob/master/outimg/out_lho.png)
+
+
+## Usage of lho_anim.ipynb
+
+Open the file and execute line by line.
+After executing the line, contain animate() function, you'll able to get the annimation
 
 ****Note-***
 
