@@ -17,7 +17,7 @@ Use ``bokeh serve`` command to run the example by executing:
 in your browser.
 
 A sample of output:
-![output](https://github.com/arabindo/qlho/blob/master/out_lho.png)
+![output](https://github.com/arabindo/QLho/blob/master/outimg/out_lho.png)
 
 ****Note-***
 
