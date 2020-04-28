@@ -29,7 +29,12 @@ A sample of output:
 ## Usage of lho_anim.ipynb
 
 Open the file and execute line by line.
-After executing the line, contain animate() function, you'll able to get the annimation
+After executing the line, contain animate() function, you'll able to get the annimation.
+
+### Screenshots are taken from animation:
+
+![output](https://github.com/arabindo/QLho/blob/master/outimg/output2.png)
+![output](https://github.com/arabindo/QLho/blob/master/outimg/output3.png)
 
 ****Note-***
 
